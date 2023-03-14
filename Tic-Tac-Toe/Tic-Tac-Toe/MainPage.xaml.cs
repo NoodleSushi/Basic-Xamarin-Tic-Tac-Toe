@@ -41,14 +41,14 @@ namespace Tic_Tac_Toe
 
         void PlayerTurnNotified(int player)
         {
-            XStatus.Text = "X " + ((player == 0) ? "player's turn" : "wait");
-            OStatus.Text = "O " + ((player == 1) ? "player's turn" : "wait");
+            XStatus.Text = "X player" + ((player == 0) ? "'s turn" : " wait");
+            OStatus.Text = "O player" + ((player == 1) ? "'s turn" : " wait");
         }
 
         void WinnerNotified(int player)
         {
-            XStatus.Text = "X player " + ((player == 0) ? "won" : "lost");
-            OStatus.Text = "O player " + ((player == 1) ? "won" : "lost");
+            XStatus.Text = "X player" + ((player == 0) ? " won" : " lost");
+            OStatus.Text = "O player" + ((player == 1) ? " won" : " lost");
         }
     }
 }

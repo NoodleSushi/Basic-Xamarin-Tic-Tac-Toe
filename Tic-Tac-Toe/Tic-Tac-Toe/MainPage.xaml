@@ -1,34 +1,37 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Tic_Tac_Toe.MainPage">
+             x:Class="Tic_Tac_Toe.MainPage"
+             BackgroundColor="White">
 
     <StackLayout>
-        <Label Text="Tic-Tac-Toe"/>
-        <Label x:Name="XStatus" TextColor="Red"/>
-        <Grid>
-            <Grid.RowDefinitions>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="*"/>
-            </Grid.RowDefinitions>
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="*"/>
-            </Grid.ColumnDefinitions>
-            <Button Text="-" Clicked="OnBoxClicked" ClassId="0" x:Name="Box0" Grid.Row="0" Grid.Column="0"/>
-            <Button Text="-" Clicked="OnBoxClicked" ClassId="1" x:Name="Box1" Grid.Row="0" Grid.Column="1"/>
-            <Button Text="-" Clicked="OnBoxClicked" ClassId="2" x:Name="Box2" Grid.Row="0" Grid.Column="2"/>
-            <Button Text="-" Clicked="OnBoxClicked" ClassId="3" x:Name="Box3" Grid.Row="1" Grid.Column="0"/>
-            <Button Text="-" Clicked="OnBoxClicked" ClassId="4" x:Name="Box4" Grid.Row="1" Grid.Column="1"/>
-            <Button Text="-" Clicked="OnBoxClicked" ClassId="5" x:Name="Box5" Grid.Row="1" Grid.Column="2"/>
-            <Button Text="-" Clicked="OnBoxClicked" ClassId="6" x:Name="Box6" Grid.Row="2" Grid.Column="0"/>
-            <Button Text="-" Clicked="OnBoxClicked" ClassId="7" x:Name="Box7" Grid.Row="2" Grid.Column="1"/>
-            <Button Text="-" Clicked="OnBoxClicked" ClassId="8" x:Name="Box8" Grid.Row="2" Grid.Column="2"/>
-        </Grid>
-        <Label x:Name="OStatus" TextColor="Blue"/>
-        <Button Text="RESET" Clicked="ResetGame"/>
+        <Label Text="Tic-Tac-Toe" HorizontalOptions="CenterAndExpand" FontSize="Title" FontAttributes="Bold" TextColor="Gray" Margin="0,20"/>
+        <Label x:Name="XStatus" TextColor="Red" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" FontSize="Medium"/>
+        <Frame HasShadow="False">
+            <Grid x:Name="TicTacToeGrid" RowSpacing="4" ColumnSpacing="4" WidthRequest="250" HeightRequest="250" HorizontalOptions="Center">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Button Text="-" Clicked="OnBoxClicked" ClassId="0" x:Name="Box0" Grid.Row="0" Grid.Column="0" TextColor="Black"/>
+                <Button Text="-" Clicked="OnBoxClicked" ClassId="1" x:Name="Box1" Grid.Row="0" Grid.Column="1" TextColor="Black"/>
+                <Button Text="-" Clicked="OnBoxClicked" ClassId="2" x:Name="Box2" Grid.Row="0" Grid.Column="2" TextColor="Black"/>
+                <Button Text="-" Clicked="OnBoxClicked" ClassId="3" x:Name="Box3" Grid.Row="1" Grid.Column="0" TextColor="Black"/>
+                <Button Text="-" Clicked="OnBoxClicked" ClassId="4" x:Name="Box4" Grid.Row="1" Grid.Column="1" TextColor="Black"/>
+                <Button Text="-" Clicked="OnBoxClicked" ClassId="5" x:Name="Box5" Grid.Row="1" Grid.Column="2" TextColor="Black"/>
+                <Button Text="-" Clicked="OnBoxClicked" ClassId="6" x:Name="Box6" Grid.Row="2" Grid.Column="0" TextColor="Black"/>
+                <Button Text="-" Clicked="OnBoxClicked" ClassId="7" x:Name="Box7" Grid.Row="2" Grid.Column="1" TextColor="Black"/>
+                <Button Text="-" Clicked="OnBoxClicked" ClassId="8" x:Name="Box8" Grid.Row="2" Grid.Column="2" TextColor="Black"/>
+            </Grid>
+        </Frame>
+        <Label x:Name="OStatus" TextColor="Blue" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" FontSize="Medium"/>
+        <Button Text="RESET" Clicked="ResetGame" BackgroundColor="Green" TextColor="Black" FontSize="Medium" WidthRequest="250" HeightRequest="80" HorizontalOptions="Center" Margin="0,0,0,50"/>
     </StackLayout>
 
 </ContentPage>
